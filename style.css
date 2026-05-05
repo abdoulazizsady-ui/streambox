@@ -12,8 +12,10 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
-  border-bottom: 1px solid #334155;
 }
 
 header h1 {
@@ -67,4 +69,11 @@ nav a {
 .card p {
   color: #94A3B8;
   font-size: 0.9rem;
+}
+
+.category {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
 }
