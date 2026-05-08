@@ -4,6 +4,13 @@
   padding: 0;
 }
 
+img,
+picture,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   background: #0F172A;
   color: #F8FAFC;
@@ -40,7 +47,7 @@ nav a {
 }
 
 #hero h2 {
-  font-size: 2.5rem;
+  font-size: calc(1.5rem + 4vw);
   margin-bottom: 1rem;
 }
 
@@ -73,7 +80,32 @@ nav a {
 
 .category {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
   padding: 2rem;
+}
+
+nav ul {
+  display: none;
+}
+
+.hamburger {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+}
+
+@media (min-width: 40em) {
+
+  nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
 }
